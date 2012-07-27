@@ -13,8 +13,8 @@ define python::pip::requirements($venv, $owner=undef, $group=undef) {
   file { $requirements:
     ensure => present,
     replace => false,
-    owner => $owner,
-    group => $group,
+    #owner => $owner,
+    #group => $group,
     content => "# Puppet will install packages listed here and update them if
 # the the contents of this file changes.",
   }
